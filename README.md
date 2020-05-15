@@ -5,6 +5,8 @@ Copyright (c) 2018 NVIDIA Corp. All Rights Reserved.
 
 The implementation of the ADF distribution propagation is derived from the paper "A General Framework for Uncertainty Estimation in Deep Learning" (Loquercio, Segù, Scaramuzza. RA-L 2020)
 
+Setting up the environment for PlaneRCNN
+------------------------------------------
 On setting up the environment for PlaneRCNN, see
 https://github.com/NVlabs/planercnn
 
@@ -13,14 +15,14 @@ https://github.com/NVlabs/planercnn
 ADF distribution propagation 
 --------------------------------------------
 
-[ADF distribution propagation for replacing torch.nn modules](.contrib/adf.py) was downloaded from the original [uncertainty_estimation_deep_learning repo](https://github.com/mattiasegu/uncertainty_estimation_deep_learning)
+[ADF distribution propagation for replacing torch.nn modules](./contrib/adf.py) was downloaded from the original [uncertainty_estimation_deep_learning repo](https://github.com/mattiasegu/uncertainty_estimation_deep_learning)
 
 To run inference for planercnn with ADF distribution propagation
 ------------------------------------------------------------------
 
- In [visualize_utils.py](.visualize_utils.py) import modules from models_adf (Comment line 16 and uncomment line 17)
+ In [visualize_utils.py](visualize_utils.py) import modules from models_adf (Comment line 16 and uncomment line 17)
  
- In [evaluate_utils.py](.evaluate_utils.py)  import modules from models_adf  (Comment line 10 and uncomment line 11)
+ In [evaluate_utils.py](evaluate_utils.py)  import modules from models_adf  (Comment line 10 and uncomment line 11)
  
 ``` 
 python evaluate_adf.py --methods=f --suffix=warping_refine --dataset=inference --customDataFolder=example_images
