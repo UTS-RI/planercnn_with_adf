@@ -7,6 +7,11 @@ The implementation of the ADF distribution propagation is derived from the paper
 
 Setting up the environment for PlaneRCNN
 ------------------------------------------
+
+You need to bulid nms and roialign with cuda-8.0 , gcc 5+, torch 0.4.0
+Then upgrade to torch==0.4.1 and run  evaluate.py
+
+
 On setting up the environment for PlaneRCNN, see
 https://github.com/NVlabs/planercnn
 

@@ -109,9 +109,10 @@ class PlaneRCNNDetector():
 
 
             if len(detections) > 0:
+                from models.modules import unmoldDetections
                 detections, detection_masks = unmoldDetections(self.config, camera, detections, detection_masks, depth_np_pred, debug=False)
                 pass
-
+            from models.modules import calcXYZModule
             XYZ_pred, detection_mask, plane_XYZ = calcXYZModule(self.config, camera, detections, detection_masks, depth_np_pred, return_individual=True)
             detection_mask = detection_mask.unsqueeze(0)
 
